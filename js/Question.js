@@ -10,6 +10,8 @@ class Question{
         this.A = createElement('h3'); 
         this.B = createElement('h3');
         this.C = createElement('h3');
+        this.wrong = createElement('h4');
+        this.right = createElement('h4');
 
     }
     display(){
@@ -26,7 +28,7 @@ class Question{
         this.question1.position(displayWidth/2-100, displayHeight/2-300);
 
         this.reset.position(displayWidth/2 +200, 50);
-
+         
         this.A.html('A: Poughkeepsie');
         this.B.html('B: Albany');
         this.C.html('C: New York City');
@@ -55,11 +57,13 @@ class Question{
                 if(contestant.answer.toUpperCase() === "B"){
                     console.log('correct');
                     textSize(10);
-                    text("Huzzah!", 50, 200);
+                    this.right.position(displayWidth/2-200,200);
+       
                 } else{
                     console.log('wrong');
-                    //why is this not diplaying?
-                    text("Wah wah!", 100, 250);
+                    
+                    this.wrong.position(displayWidth/2-200, 200);
+                    
                 }
             });
            
