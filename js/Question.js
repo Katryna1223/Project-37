@@ -52,7 +52,7 @@ class Question{
                 contestant.update();
                 this.button2.hide();
                 this.input2.hide();
-                if(contestant.answer === "B"){
+                if(contestant.answer.toUpperCase() === "B"){
                     console.log('correct');
                     textSize(10);
                     text("Huzzah!", 50, 200);
