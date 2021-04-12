@@ -17,7 +17,7 @@ function draw(){
   
   question.display();
   
-  //console.log(gameState);
+  console.log(gameState);
   
   if(contestantCount === 2){
     quiz.update(1);
